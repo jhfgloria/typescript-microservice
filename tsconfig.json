@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "outDir": "./dist",
+    "allowJs": false,
+    "target": "ES2019",
+    "sourceMap": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "incremental": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "types": ["node", "mocha"],
+  },
+  "include": [
+    "./src/index.ts",
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+}

@@ -1,0 +1,18 @@
+{
+  "dev": {
+    "driver": "postgres",
+    "host": "localhost",
+    "port": "5430",
+    "user": "postgres",
+    "password": "mysecretpassword",
+    "database": "postgres"
+  },
+  "production": {
+    "driver": "postgres",
+    "host": { "ENV": "DB_HOST" },
+    "port": { "ENV": "DB_PORT" },
+    "user": { "ENV": "DB_USER" },
+    "password": { "ENV": "DB_PASS" },
+    "database": { "ENV": "DB_NAME" }
+  }
+}
