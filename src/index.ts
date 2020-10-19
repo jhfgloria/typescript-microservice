@@ -6,11 +6,11 @@ import { databaseCredentials, port } from './configuration';
 
 import helloWorldController from "./controllers/hello-world";
 
-function startServer(pool: PoolClient): void {
+function startServer(_pool: PoolClient): void {
   express()
     .use(bodyParser.json())
     .use(morgan(':method :url :status :res[content-length] - :response-time ms'))
-    .get('/hello-world', helloWorldController.helloWorld())
+    .get('/hello-world', helloWorldController.helloWorld)
     .listen(port, () => console.log(`Listening on port ${port}`));
 }
 
