@@ -6,4 +6,4 @@ export const databaseCredentials = {
   username: process.env.DB_USER || "postgres",
   password: process.env.DB_PASS || "mysecretpassword",
   database: process.env.DB_NAME || "postgres",
-}
+};

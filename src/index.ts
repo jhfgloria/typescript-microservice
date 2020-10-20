@@ -12,13 +12,13 @@ import graphqlRoot from "./web/graphql/root";
 function startServer(_pool: PoolClient): void {
   express()
     .use(bodyParser.json())
-    .use(morgan(':method :url :status :res[content-length] - :response-time ms'))
-    .use('/graphql', graphqlHTTP({
+    .use(morgan(":method :url :status :res[content-length] - :response-time ms"))
+    .use("/graphql", graphqlHTTP({
       schema: graphqlSchema,
       rootValue: graphqlRoot,
       graphiql: true
     }))
-    .get('/hello-world', helloWorldController.helloWorld)
+    .get("/hello-world", helloWorldController.helloWorld)
     .listen(port, () => console.log(`Listening on port ${port}`));
 }
 
@@ -31,7 +31,8 @@ const pool = new Pool({
 });
 
 const environment = process.env.NODE_ENV || "dev";
-const DBMigrate = require('db-migrate');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const DBMigrate = require("db-migrate");
 const migrations = DBMigrate.getInstance(true, { env: environment });
 
 migrations.registerAPIHook()
