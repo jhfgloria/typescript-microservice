@@ -1,13 +1,14 @@
+import "module-alias/register";
 import bodyParser from "body-parser";
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
 import morgan from "morgan";
 import { Pool, PoolClient } from "pg";
 
-import { databaseCredentials, port } from "./configuration";
-import helloWorldController from "./web/controllers/hello-world";
-import graphqlSchema from "./web/graphql/schema";
-import graphqlRoot from "./web/graphql/root";
+import { databaseCredentials, port } from "configuration";
+import helloWorldController from "@web/controllers/hello-world";
+import graphqlSchema from "@web/graphql/schema";
+import graphqlRoot from "@web/graphql/root";
 
 function startServer(_pool: PoolClient): void {
   express()

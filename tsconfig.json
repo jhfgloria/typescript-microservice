@@ -13,6 +13,12 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "types": ["node", "mocha"],
+    "baseUrl": "src",
+    "paths": {
+      "@web/*": ["./web/*"],
+      "@lib/*": ["./lib/*"],
+      "configuration": ["./configuration.ts"],
+    },
   },
   "include": [
     "./src/index.ts",

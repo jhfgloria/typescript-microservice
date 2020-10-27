@@ -11,6 +11,11 @@
     "compile": "tsc",
     "compile:watch": "tsc && tsc --watch"
   },
+  "_moduleAliases": {
+    "configuration": "dist/configuration.js",
+    "@lib": "dist/lib",
+    "@web": "dist/web"
+  },
   "devDependencies": {
     "@babel/preset-typescript": "7.9.0",
     "@types/chai": "4.2.11",
@@ -37,6 +42,7 @@
     "express": "4.17.1",
     "express-graphql": "^0.11.0",
     "graphql": "^15.3.0",
+    "module-alias": "^2.2.2",
     "morgan": "1.10.0",
     "pg": "8.0.0"
   }
